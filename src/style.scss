@@ -1,12 +1,10 @@
 @use "cartes" as *;
 @use "colors" as *;
+@use "mixin" as *;
 
 body {
   background-color: $fond;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column, center, center);
 
   .middle-section {
     background-color: lighten($fond, 10%) ;
