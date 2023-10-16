@@ -4,4 +4,12 @@
     justify-content: $justify;
     align-items: $align;
 }
-  
+
+@mixin carte_type($background-color, $width, $height, $border, $top, $left) {
+    background-color: $background-color;
+    width: $width;
+    height: $height;
+    border: $border;
+    top: $top;
+    left: $left;
+}

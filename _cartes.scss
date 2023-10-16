@@ -1,10 +1,6 @@
 @use "colors" as *;
+@use "mixin" as *;
 
 .carte {
-    background-color: lighten($fond, 50%) ;
-    width: 100px;
-    height: 150px;
-    border: 1px solid black;
-    top: 50px;
-    left: 50px;
-  }
+    @include carte_type(lighten($fond, 50%), 100px, 150px, 1px solid black, 50px, 50px)
+}
