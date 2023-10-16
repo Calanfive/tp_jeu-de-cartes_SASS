@@ -5,7 +5,7 @@
     @include carte_type(lighten($fond, 50%), 100px, 150px, 2px solid black, 50px, 50px);
     @include flex(column, space-between, center);
     border-radius: 5px;
-
+    rotate: random(360) * 1deg;
     .up {
         @include flex(row, start, unset);
         width: 100%;
