@@ -1,4 +1,5 @@
-$fond: #279527;
+@use "cartes" as *;
+@use "colors" as *;
 
 body {
   background-color: $fond;
@@ -9,9 +10,11 @@ body {
 
   .middle-section {
     background-color: lighten($fond, 10%) ;
-    width: 600px;
-    height: 800px;
+    width: 800px;
+    height: 600px;
     border: 5px solid white;
     border-radius: 50px;
+    
+
   }
 }
