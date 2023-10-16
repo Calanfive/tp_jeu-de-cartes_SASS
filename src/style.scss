@@ -1,3 +1,17 @@
+$fond: #279527;
+
 body {
-  background-color: green;
+  background-color: $fond;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .middle-section {
+    background-color: lighten($fond, 10%) ;
+    width: 600px;
+    height: 800px;
+    border: 5px solid white;
+    border-radius: 50px;
+  }
 }
