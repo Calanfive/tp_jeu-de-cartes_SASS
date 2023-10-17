@@ -2,7 +2,6 @@
 @use "colors" as *;
 @use "mixin" as *;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +24,8 @@ body {
   @for $i from 1 through 5 {
     .carte-#{$i + 1} {
       position: absolute;
-      @include position(50 * $i, 0)
+      @include position(0 * $i, 35 * $i);
+      @include rotate(8 * $i);
     }
   }
 }

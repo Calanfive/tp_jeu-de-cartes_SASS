@@ -18,3 +18,7 @@
     top: $top * 1px;
     left: $left * 1px;
 }
+
+@mixin rotate($rotate) {
+    rotate: $rotate * 1deg;
+}
