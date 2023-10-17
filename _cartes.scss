@@ -5,7 +5,7 @@
 $carteWidth: 80px;
 $carteHeight: math.div($carteWidth * 3, 2);
 
-.carte-1 {
+.carte-1, .carte-2, .carte-3, .carte-4, .carte-5 {
     @include carte_type(lighten($fond, 50%), $carteWidth, $carteHeight, 2px solid black, 50px, 50px);
     @include flex(column, space-between, center);
     border-radius: 5px;
@@ -30,102 +30,3 @@ $carteHeight: math.div($carteWidth * 3, 2);
     }
 }
 
-.carte-2 {
-    @include carte_type(lighten($fond, 50%), $carteWidth, $carteHeight, 2px solid black, 50px, 50px);
-    @include flex(column, space-between, center);
-    border-radius: 5px;
-    // rotate: random(360) * 1deg;
-
-    .up {
-        @include flex(row, start, unset);
-        width: 100%;
-        padding-left: 5px;
-    }
-    .signe{
-        font-size: math.div($carteWidth, 2);
-    }
-    .down {
-        @include flex(row, end, unset);
-        width: 100%;
-        padding-right: 5px;
-    }
-    .up_box, .down_box {
-        @include flex(column, unset, center);
-        font-size: math.div($carteWidth, 6);
-    }
-}
-
-.carte-3 {
-    @include carte_type(lighten($fond, 50%), $carteWidth, $carteHeight, 2px solid black, 50px, 50px);
-    @include flex(column, space-between, center);
-    border-radius: 5px;
-    // rotate: random(360) * 1deg;
-
-    .up {
-        @include flex(row, start, unset);
-        width: 100%;
-        padding-left: 5px;
-    }
-    .signe{
-        font-size: math.div($carteWidth, 2);
-    }
-    .down {
-        @include flex(row, end, unset);
-        width: 100%;
-        padding-right: 5px;
-    }
-    .up_box, .down_box {
-        @include flex(column, unset, center);
-        font-size: math.div($carteWidth, 6);
-    }
-}
-
-.carte-4 {
-    @include carte_type(lighten($fond, 50%), $carteWidth, $carteHeight, 2px solid black, 50px, 50px);
-    @include flex(column, space-between, center);
-    border-radius: 5px;
-    // rotate: random(360) * 1deg;
-
-    .up {
-        @include flex(row, start, unset);
-        width: 100%;
-        padding-left: 5px;
-    }
-    .signe{
-        font-size: math.div($carteWidth, 2);
-    }
-    .down {
-        @include flex(row, end, unset);
-        width: 100%;
-        padding-right: 5px;
-    }
-    .up_box, .down_box {
-        @include flex(column, unset, center);
-        font-size: math.div($carteWidth, 6);
-    }
-}
-
-.carte-5 {
-    @include carte_type(lighten($fond, 50%), $carteWidth, $carteHeight, 2px solid black, 50px, 50px);
-    @include flex(column, space-between, center);
-    border-radius: 5px;
-    // rotate: random(360) * 1deg;
-
-    .up {
-        @include flex(row, start, unset);
-        width: 100%;
-        padding-left: 5px;
-    }
-    .signe{
-        font-size: math.div($carteWidth, 2);
-    }
-    .down {
-        @include flex(row, end, unset);
-        width: 100%;
-        padding-right: 5px;
-    }
-    .up_box, .down_box {
-        @include flex(column, unset, center);
-        font-size: math.div($carteWidth, 6);
-    }
-}
