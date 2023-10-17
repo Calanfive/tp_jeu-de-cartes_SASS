@@ -12,20 +12,27 @@ body {
   height: 100%;
   @include flex(column, center, center);
 
-  .middle-section {
+  .air-de-jeu {
     background-color: lighten($fond, 10%) ;
     width: 800px;
     height: 600px;
     border: 5px solid white;
     border-radius: 50px;
     position: relative;
+
+    .main-adverse, .defausse, .main {
+      width: 250px;
+      height: 190px;
+      border: 2px solid rgb(255, 255, 4);
+      position: relative;
+    }
   }
 
-  @for $i from 1 through 5 {
+  @for $i from 1 through 14 {
     .carte-#{$i + 1} {
       position: absolute;
-      @include position(0 * $i, 35 * $i);
-      @include rotate(8 * $i);
+      @include position(10 * $i, 20 * $i);
+      @include rotate(-10 + 8 * $i);
     }
   }
 }
