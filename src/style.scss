@@ -22,10 +22,10 @@ body {
     position: relative;
   }
 
-  @for $i from 2 through 5 {
+  @for $i from 1 through 5 {
     .carte-#{$i + 1} {
       position: absolute;
-      @include position(50 * $i, 50 *$i)
+      @include position(50 * $i, 0)
     }
   }
 }

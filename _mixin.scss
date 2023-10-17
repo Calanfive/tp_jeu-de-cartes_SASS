@@ -15,6 +15,6 @@
 }
 
 @mixin position($top, $left) {
-    top: $top;
-    left: $left;
+    top: $top * 1px;
+    left: $left * 1px;
 }
