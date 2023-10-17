@@ -5,7 +5,7 @@
 $carteWidth: 80px;
 $carteHeight: math.div($carteWidth * 3, 2);
 
-.carte-1, .carte-2, .carte-3, .carte-4, .carte-5 {
+.carte-1, .carte-2, .carte-3, .carte-4, .carte-5, .carte-6 {
     @include carte_type(lighten($fond, 50%), $carteWidth, $carteHeight, 2px solid black, 50px, 50px);
     @include flex(column, space-between, center);
     border-radius: 5px;

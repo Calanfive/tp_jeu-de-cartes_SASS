@@ -84,7 +84,7 @@ Utilisez une boucle for de sass pour gérer l'empilement des cartes.
 
 ### 7. Créez une main de 6 cartes
 
-Créez une 6ème carte et changement le positionnement des cartes pour qu'elles soient côte à côte.
+Créez une 6ème carte et changez le positionnement des cartes pour qu'elles soient côte à côte.
 Puis ajoutez une rotation particulière à chaque élément de la main.
 
 Dans ce style :
