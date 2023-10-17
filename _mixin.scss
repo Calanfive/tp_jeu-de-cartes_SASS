@@ -13,3 +13,8 @@
     top: $top;
     left: $left;
 }
+
+@mixin position($top, $left) {
+    top: $top;
+    left: $left;
+}

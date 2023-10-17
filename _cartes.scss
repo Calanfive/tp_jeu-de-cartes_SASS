@@ -1,29 +1,31 @@
 @use "colors" as *;
 @use "mixin" as *;
+@use "sass:math";
+
+$carteWidth: 80px;
+$carteHeight: math.div($carteWidth * 3, 2);
 
 .carte {
-    @include carte_type(lighten($fond, 50%), 80px, 120px, 2px solid black, 50px, 50px);
+    @include carte_type(lighten($fond, 50%), $carteWidth, $carteHeight, 2px solid black, 50px, 50px);
     @include flex(column, space-between, center);
     border-radius: 5px;
-    rotate: random(360) * 1deg;
-    
+    // rotate: random(360) * 1deg;
+
     .up {
         @include flex(row, start, unset);
         width: 100%;
         padding-left: 5px;
     }
     .signe{
-        font-size: 30px;
+        font-size: math.div($carteWidth, 2);
     }
     .down {
         @include flex(row, end, unset);
         width: 100%;
         padding-right: 5px;
     }
-    .up_box {
-        @include flex(column, unset, unset);
-    }
-    .down_box {
-        @include flex(column, unset, unset);
+    .up_box, .down_box {
+        @include flex(column, unset, center);
+        font-size: math.div($carteWidth, 6);
     }
 }
