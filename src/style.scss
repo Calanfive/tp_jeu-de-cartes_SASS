@@ -1,6 +1,7 @@
 @use "cartes" as *;
 @use "colors" as *;
 @use "mixin" as *;
+@use "sass:math";
 
 * {
   margin: 0;
@@ -13,6 +14,7 @@ body {
   @include flex(column, center, center);
 
   .air-de-jeu {
+    @include flex(column, center, center);
     background-color: lighten($fond, 10%) ;
     width: 800px;
     height: 600px;
@@ -28,11 +30,37 @@ body {
     }
   }
 
-  @for $i from 1 through 14 {
-    .carte-#{$i + 1} {
-      position: absolute;
-      @include position(10 * $i, 20 * $i);
-      @include rotate(-10 + 8 * $i);
+  .main {
+    @for $i from 0 through 5 {
+      .carte-#{$i + 1} {
+        position: absolute;
+        @if $i <= math.div(6, 3) {
+          @include position((6 - $i) * 10, 25 * $i);
+        } @else {
+          @include position($i * 15, 25 * $i);
+        }
+        @include rotate(-45 + (13 * $i));
+      }
     }
   }
-}
+
+  .defausse {
+    @for $ind from 6 through 8 {
+      .carte-#{$ind + 1} {
+        position: absolute;
+        @include position(10, 10* $ind);
+        @include rotate(0);
+      }
+    }
+  }
+
+  .main-adverse {
+    @for $ind from 9 through 14 {
+      .carte-#{$ind + 1} {
+        position: absolute;
+        @include position(10, 10* $ind);
+        @include rotate(0);
+      }
+    }
+  }
+}  
